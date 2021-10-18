@@ -1,0 +1,533 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 2800 2200 0    50   Input ~ 0
+Vbat
+Text HLabel 7700 3550 2    50   Input ~ 0
+-1.8V
+Text HLabel 9200 2400 2    50   Input ~ 0
+12V
+$Comp
+L Device:R_US R15
+U 1 1 6148E0A3
+P 4850 2450
+F 0 "R15" H 4918 2496 50  0000 L CNN
+F 1 "10k" H 4918 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4890 2440 50  0001 C CNN
+F 3 "~" H 4850 2450 50  0001 C CNN
+	1    4850 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R16
+U 1 1 6148E365
+P 4850 2750
+F 0 "R16" H 4918 2796 50  0000 L CNN
+F 1 "10k" H 4918 2705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4890 2740 50  0001 C CNN
+F 3 "~" H 4850 2750 50  0001 C CNN
+	1    4850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 6148EB43
+P 4000 3150
+F 0 "C4" H 4115 3196 50  0000 L CNN
+F 1 "100pF" H 4115 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4038 3000 50  0001 C CNN
+F 3 "~" H 4000 3150 50  0001 C CNN
+	1    4000 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2600 4850 2600
+Wire Wire Line
+	4500 2800 4500 2900
+Wire Wire Line
+	4500 3300 4000 3300
+Wire Wire Line
+	3250 3300 3250 2400
+Wire Wire Line
+	3250 2400 3500 2400
+Connection ~ 4850 2600
+Wire Wire Line
+	4850 2900 4500 2900
+Connection ~ 4500 2900
+Wire Wire Line
+	4500 2900 4500 3300
+$Comp
+L power:GND #PWR011
+U 1 1 614940A8
+P 3750 3050
+F 0 "#PWR011" H 3750 2800 50  0001 C CNN
+F 1 "GND" H 3755 2877 50  0000 C CNN
+F 2 "" H 3750 3050 50  0001 C CNN
+F 3 "" H 3750 3050 50  0001 C CNN
+	1    3750 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2800 3350 2800
+Wire Wire Line
+	3350 2800 3350 2200
+Wire Wire Line
+	3350 2200 4000 2200
+$Comp
+L Timer:NE555D U2
+U 1 1 6148C85C
+P 4000 2600
+F 0 "U2" H 4250 3150 50  0000 C CNN
+F 1 "NE555D" H 4250 3050 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4850 2200 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/NE555_SA555_NA555.pdf" H 4850 2200 50  0001 C CNN
+	1    4000 2600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3500 2600
+Connection ~ 4000 3300
+Wire Wire Line
+	4000 3300 3250 3300
+Wire Wire Line
+	4000 3000 3750 3000
+Wire Wire Line
+	3750 3000 3750 3050
+Connection ~ 4000 3000
+Text Label 4600 2400 0    50   ~ 0
+CLK
+Wire Wire Line
+	4600 2400 4500 2400
+Wire Wire Line
+	4000 2200 4850 2200
+Wire Wire Line
+	4850 2200 4850 2300
+Connection ~ 4000 2200
+$Comp
+L Device:C C3
+U 1 1 6149A385
+P 2950 2350
+F 0 "C3" H 3100 2450 50  0000 L CNN
+F 1 ".01uF" H 3050 2350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2988 2200 50  0001 C CNN
+F 3 "~" H 2950 2350 50  0001 C CNN
+	1    2950 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2200 2950 2200
+Connection ~ 3350 2200
+$Comp
+L power:GND #PWR010
+U 1 1 6149B294
+P 2950 2550
+F 0 "#PWR010" H 2950 2300 50  0001 C CNN
+F 1 "GND" H 2955 2377 50  0000 C CNN
+F 2 "" H 2950 2550 50  0001 C CNN
+F 3 "" H 2950 2550 50  0001 C CNN
+	1    2950 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2500 2950 2550
+Wire Wire Line
+	2800 2200 2950 2200
+Connection ~ 2950 2200
+$Comp
+L Device:C C7
+U 1 1 6149E3F8
+P 6850 2400
+F 0 "C7" H 6965 2446 50  0000 L CNN
+F 1 "22uF" H 6965 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6888 2250 50  0001 C CNN
+F 3 "~" H 6850 2400 50  0001 C CNN
+F 4 " CL21A226MAQNNNE" H 6850 2400 50  0001 C CNN "PN"
+	1    6850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D7
+U 1 1 6149E8E3
+P 6650 2200
+F 0 "D7" H 6650 1983 50  0000 C CNN
+F 1 "CUS520" H 6650 2074 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 6650 2200 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=7041&prodName=CUS520" H 6650 2200 50  0001 C CNN
+	1    6650 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 614A0753
+P 7250 2400
+F 0 "C8" H 7365 2446 50  0000 L CNN
+F 1 "22uF" H 7365 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 7288 2250 50  0001 C CNN
+F 3 "~" H 7250 2400 50  0001 C CNN
+F 4 " CL21A226MAQNNNE" H 7250 2400 50  0001 C CNN "PN"
+	1    7250 2400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4850 2200
+Wire Wire Line
+	6400 2600 6850 2600
+Wire Wire Line
+	6850 2600 6850 2550
+Wire Wire Line
+	6800 2200 6850 2200
+Wire Wire Line
+	6850 2250 6850 2200
+Connection ~ 6850 2200
+Wire Wire Line
+	6850 2200 6900 2200
+Wire Wire Line
+	7200 2200 7250 2200
+Wire Wire Line
+	7250 2200 7250 2250
+Connection ~ 7250 2200
+$Comp
+L power:GND #PWR013
+U 1 1 614A73BD
+P 6850 3000
+F 0 "#PWR013" H 6850 2750 50  0001 C CNN
+F 1 "GND" H 6855 2827 50  0000 C CNN
+F 2 "" H 6850 3000 50  0001 C CNN
+F 3 "" H 6850 3000 50  0001 C CNN
+	1    6850 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 614ABC65
+P 6100 3950
+F 0 "#PWR012" H 6100 3700 50  0001 C CNN
+F 1 "GND" H 6105 3777 50  0000 C CNN
+F 2 "" H 6100 3950 50  0001 C CNN
+F 3 "" H 6100 3950 50  0001 C CNN
+	1    6100 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 614AC930
+P 6500 3750
+F 0 "C6" H 6615 3796 50  0000 L CNN
+F 1 "1uF" H 6615 3705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6538 3600 50  0001 C CNN
+F 3 "~" H 6500 3750 50  0001 C CNN
+	1    6500 3750
+	1    0    0    -1  
+$EndComp
+Text Label 5300 3550 2    50   ~ 0
+CLK
+Text Label 6050 2600 2    50   ~ 0
+CLK
+$Comp
+L Device:D D8
+U 1 1 614C1ADC
+P 7050 2200
+F 0 "D8" H 7050 1983 50  0000 C CNN
+F 1 "CUS520" H 7050 2074 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 7050 2200 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=7041&prodName=CUS520" H 7050 2200 50  0001 C CNN
+	1    7050 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D6
+U 1 1 614C1FDD
+P 6300 3550
+F 0 "D6" H 6300 3750 50  0000 C CNN
+F 1 "CUS520" H 6300 3676 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 6300 3550 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=7041&prodName=CUS520" H 6300 3550 50  0001 C CNN
+	1    6300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D5
+U 1 1 614C229A
+P 6100 3750
+F 0 "D5" H 6150 3900 50  0000 R CNN
+F 1 "CUS520" H 6200 3650 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 6100 3750 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=7041&prodName=CUS520" H 6100 3750 50  0001 C CNN
+	1    6100 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 614C8827
+P 5900 3550
+F 0 "C5" V 5648 3550 50  0000 C CNN
+F 1 "1uF" V 5739 3550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5938 3400 50  0001 C CNN
+F 3 "~" H 5900 3550 50  0001 C CNN
+	1    5900 3550
+	0    1    1    0   
+$EndComp
+Text HLabel 8200 4450 2    50   Input ~ 0
+-3V3
+$Comp
+L Device:C C9
+U 1 1 6151D133
+P 7700 3750
+F 0 "C9" H 7815 3796 50  0000 L CNN
+F 1 "1uF" H 7815 3705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7738 3600 50  0001 C CNN
+F 3 "~" H 7700 3750 50  0001 C CNN
+	1    7700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R18
+U 1 1 61520076
+P 7400 4000
+F 0 "R18" H 7332 3954 50  0000 R CNN
+F 1 "12k" H 7332 4045 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7440 3990 50  0001 C CNN
+F 3 "~" H 7400 4000 50  0001 C CNN
+	1    7400 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R17
+U 1 1 615210C6
+P 7400 3700
+F 0 "R17" H 7332 3654 50  0000 R CNN
+F 1 "5.6k" H 7332 3745 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7440 3690 50  0001 C CNN
+F 3 "~" H 7400 3700 50  0001 C CNN
+	1    7400 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Multimeter:TT8M3TR Q11
+U 2 1 615300BE
+P 6300 2800
+F 0 "Q11" H 6505 2846 50  0000 L CNN
+F 1 "TT8M3TR" H 6505 2755 50  0000 L CNN
+F 2 "footprints:TT8M3" H 6500 2725 50  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Rohm%20PDFs/TT8M3.pdf" H 6400 2800 50  0001 L CNN
+	2    6300 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Multimeter:TT8M3TR Q11
+U 1 1 6153B1B1
+P 6300 2400
+F 0 "Q11" H 5850 2250 50  0000 L CNN
+F 1 "TT8M3TR" H 5750 2350 50  0000 L CNN
+F 2 "footprints:TT8M3" H 6500 2325 50  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Rohm%20PDFs/TT8M3.pdf" H 6400 2400 50  0001 L CNN
+	1    6300 2400
+	1    0    0    1   
+$EndComp
+Connection ~ 6400 2600
+Connection ~ 6400 2200
+Wire Wire Line
+	6400 2200 6500 2200
+Wire Wire Line
+	4850 2200 5650 2200
+Wire Wire Line
+	6050 2400 6050 2800
+Wire Wire Line
+	6050 2800 6100 2800
+Wire Wire Line
+	6050 2400 6100 2400
+$Comp
+L Multimeter:TT8M3TR Q10
+U 2 1 6154C798
+P 5550 3750
+F 0 "Q10" H 5250 3650 50  0000 L CNN
+F 1 "TT8M3TR" H 5200 3550 50  0000 L CNN
+F 2 "footprints:TT8M3" H 5750 3675 50  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Rohm%20PDFs/TT8M3.pdf" H 5650 3750 50  0001 L CNN
+	2    5550 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Multimeter:TT8M3TR Q10
+U 1 1 615729FF
+P 5550 3350
+F 0 "Q10" H 5250 3150 50  0000 L CNN
+F 1 "TT8M3TR" H 5150 3250 50  0000 L CNN
+F 2 "footprints:TT8M3" H 5750 3275 50  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Rohm%20PDFs/TT8M3.pdf" H 5650 3350 50  0001 L CNN
+	1    5550 3350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5350 3350 5300 3350
+Wire Wire Line
+	5300 3350 5300 3750
+Wire Wire Line
+	5300 3750 5350 3750
+Wire Wire Line
+	5650 3550 5750 3550
+Connection ~ 5650 3550
+Wire Wire Line
+	6100 3950 5650 3950
+Wire Wire Line
+	6100 3950 6500 3950
+Wire Wire Line
+	6500 3950 6500 3900
+Connection ~ 6100 3950
+Wire Wire Line
+	7400 3850 7050 3850
+Connection ~ 7400 3850
+Wire Wire Line
+	6500 3950 6500 4150
+Wire Wire Line
+	6500 4150 7400 4150
+Connection ~ 6500 3950
+Wire Wire Line
+	7400 3550 7700 3550
+Wire Wire Line
+	7700 3900 7700 4150
+Wire Wire Line
+	7700 4150 7400 4150
+Connection ~ 7400 4150
+Wire Wire Line
+	7350 3550 7400 3550
+Connection ~ 7400 3550
+Wire Wire Line
+	7700 3550 7700 3600
+Wire Wire Line
+	6050 3550 6100 3550
+Wire Wire Line
+	6100 3550 6100 3600
+Connection ~ 6100 3550
+Wire Wire Line
+	6100 3550 6150 3550
+Wire Wire Line
+	6450 3550 6500 3550
+Wire Wire Line
+	6500 3550 6500 3600
+Wire Wire Line
+	6500 3550 6750 3550
+Connection ~ 6500 3550
+Wire Wire Line
+	6100 3900 6100 3950
+Wire Wire Line
+	5650 3150 5650 2200
+Connection ~ 5650 2200
+Wire Wire Line
+	5650 2200 6400 2200
+$Comp
+L Device:R_US R19
+U 1 1 615A2934
+P 8850 2550
+F 0 "R19" H 8782 2504 50  0000 R CNN
+F 1 "8.2k" H 8782 2595 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8890 2540 50  0001 C CNN
+F 3 "~" H 8850 2550 50  0001 C CNN
+	1    8850 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R20
+U 1 1 615A344D
+P 7950 2850
+F 0 "R20" H 7882 2804 50  0000 R CNN
+F 1 "56k" H 7882 2895 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7990 2840 50  0001 C CNN
+F 3 "~" H 7950 2850 50  0001 C CNN
+	1    7950 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 615A7081
+P 9200 2600
+F 0 "C10" H 9315 2646 50  0000 L CNN
+F 1 "1uF" H 9315 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 9238 2450 50  0001 C CNN
+F 3 "~" H 9200 2600 50  0001 C CNN
+	1    9200 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2400 9200 2400
+Wire Wire Line
+	9200 2400 9200 2450
+Wire Wire Line
+	9200 2750 9200 3000
+Wire Wire Line
+	6400 3000 6850 3000
+Connection ~ 6850 3000
+Wire Wire Line
+	6850 3000 7250 3000
+$Comp
+L Regulator_Linear:LM337_TO263 U3
+U 1 1 61765129
+P 7050 3550
+F 0 "U3" H 7050 3308 50  0000 C CNN
+F 1 "LM337_TO263" H 7050 3399 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-2" H 7050 3350 50  0001 C CIN
+F 3 "https://www.onsemi.com/pub/Collateral/LM337-D.PDF" H 7050 3550 50  0001 C CNN
+	1    7050 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Multimeter:LM317LPW U4
+U 1 1 6176FA75
+P 8350 2050
+F 0 "U4" H 8350 2125 50  0000 C CNN
+F 1 "LM317LPW" H 8350 2034 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 8350 2050 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lm317l.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1634195790021&ref_url=https%253A%252F%252Fwww.ti.com%252Fgeneral%252Fdocs%252Fsuppproductinfo.tsp%253FdistId%253D10%2526gotoUrl%253Dhttps%253A%252F%252Fwww.ti.com%252Flit%252Fgpn%252Flm317l" H 8350 2050 50  0001 C CNN
+	1    8350 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2550 7250 3000
+$Comp
+L Device:C C11
+U 1 1 61777A97
+P 7650 2400
+F 0 "C11" H 7765 2446 50  0000 L CNN
+F 1 ".1uF" H 7765 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7688 2250 50  0001 C CNN
+F 3 "~" H 7650 2400 50  0001 C CNN
+	1    7650 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2200 7650 2250
+Wire Wire Line
+	7250 2200 7650 2200
+Wire Wire Line
+	7650 2550 7650 3000
+Wire Wire Line
+	7650 3000 7250 3000
+Connection ~ 7250 3000
+Wire Wire Line
+	7650 2200 7950 2200
+Connection ~ 7650 2200
+Wire Wire Line
+	7950 2700 7950 2500
+Wire Wire Line
+	7950 2700 8850 2700
+Wire Wire Line
+	7650 3000 7950 3000
+Connection ~ 7650 3000
+Connection ~ 7950 2700
+Wire Wire Line
+	7950 3000 9200 3000
+Connection ~ 7950 3000
+Wire Wire Line
+	8750 2400 8850 2400
+Connection ~ 8850 2400
+$EndSCHEMATC

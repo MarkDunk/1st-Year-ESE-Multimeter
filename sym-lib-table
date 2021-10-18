@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Multimeter)(type Legacy)(uri ${KIPRJMOD}/Multimeter.lib)(options "")(descr ""))
+)

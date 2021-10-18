@@ -1,0 +1,67 @@
+.title KiCad schematic
+Q3 Net-_Q3-Pad1_ Net-_Q1-Pad4_ Net-_Q3-Pad3_ MMBT3906
+Q6 Net-_Q4-Pad1_ Net-_Q3-Pad1_ /Vin MMBT3906
+RV1 Net-_Q4-Pad1_ GND NC_01 10k
+J4 Net-_J4-Pad1_ GND Screw_Terminal_01x02
+R3 Net-_Q8-Pad6_ Net-_Q7-Pad6_ 90.9
+R4 Net-_Q7-Pad6_ Net-_Q7-Pad4_ 9
+R5 Net-_Q7-Pad4_ GND 1
+U1 Net-_Q9-Pad6_ /Vin /Vdd /Vss Net-_Q9-Pad2_ TLV274CDR
+R7 Net-_Q9-Pad2_ Net-_Q9-Pad4_ 270k
+R6 Net-_Q9-Pad4_ Net-_Q9-Pad6_ 27k
+RV2 Net-_Q9-Pad6_ GND NC_02 5k
+RV3 Net-_Q9-Pad2_ Net-_J4-Pad1_ NC_03 100k
+Q5 Net-_Q3-Pad1_ Net-_Q1-Pad4_ Net-_Q3-Pad1_ MMBT3906
+SW3 /10V_SW /1V_SW NC_04 NC_05 NC_06 NC_07 /.1A_SW /.01A_SW /.001A_SW NC_08 NC_09 NC_10 Net-_SW3-Pad13_ Net-_SW3-Pad14_ SW_Rotary2x6
+R13 /Vdd /10V_SW 5x27k
+R12 /Vdd /1V_SW 27k
+R11 /Vdd /.1A_SW 27k
+R10 /Vdd /.01A_SW 27k
+R9 /Vdd /.001A_SW 27k
+SW2 /R_SW GND SW_SPST
+R14 /Vdd /R_SW 27k
+SW1 +BATT /Power/Vbat SW_SPST
+J1 /V+ Conn_01x01
+J2 GND Conn_01x01
+D4 Net-_D4-Pad1_ Net-_D3-Pad2_ MMSZ5238B
+D3 GND Net-_D3-Pad2_ LED
+R8 Net-_D4-Pad1_ Net-_J4-Pad1_ 470
+Q4 Net-_Q4-Pad1_ Net-_Q3-Pad3_ Net-_Q4-Pad1_ MMBT3906
+C1 GND /Vdd .1u
+C2 /Vss GND .1u
+Q9 /10V_SW Net-_Q9-Pad2_ /1V_SW Net-_Q9-Pad4_ Net-_Q9-Pad2_ Net-_Q9-Pad6_ SQ3989EV
+Q7 /.01A_SW /Vin /.001A_SW Net-_Q7-Pad4_ /Vin Net-_Q7-Pad6_ SQ3989EV
+Q8 /.1A_SW /Vin Net-_Q8-Pad6_ SQ3989EV
+Q1 Net-_Q1-Pad1_ /Vdd /R_SW Net-_Q1-Pad4_ Net-_Q1-Pad5_ /Vin SQ3989EV
+J3 GND Conn_01x01
+Q2 GND Net-_Q1-Pad5_ Net-_D2-Pad1_ Net-_Q1-Pad1_ Net-_Q1-Pad5_ /V+ SQ3989EV
+D2 Net-_D2-Pad1_ Net-_D1-Pad2_ MMSZ5238B
+D1 GND Net-_D1-Pad2_ LED
+R1 Net-_Q1-Pad1_ GND 1k
+R2 Net-_Q1-Pad5_ Net-_D2-Pad1_ 470
+SW4 Net-_SW3-Pad13_ /Vss Net-_SW3-Pad14_ SW_SPDT
+R15 /Power/Vbat Net-_R15-Pad2_ 10k
+R16 Net-_R15-Pad2_ Net-_C4-Pad2_ 10k
+C4 GND Net-_C4-Pad2_ 100p
+U2 GND Net-_C4-Pad2_ /Power/CLK /Power/Vbat NC_11 Net-_C4-Pad2_ Net-_R15-Pad2_ /Power/Vbat NE555D
+C3 /Power/Vbat GND .01u
+C7 Net-_C7-Pad1_ Net-_C7-Pad2_ 22u
+D7 Net-_C7-Pad1_ /Power/Vbat CUS520
+C8 Net-_C11-Pad1_ GND 22u
+C6 Net-_C6-Pad1_ GND 1u
+D8 Net-_C11-Pad1_ Net-_C7-Pad1_ CUS520
+D6 Net-_C5-Pad1_ Net-_C6-Pad1_ CUS520
+D5 GND Net-_C5-Pad1_ CUS520
+C5 Net-_C5-Pad1_ Net-_C5-Pad2_ 1u
+C9 /Vss GND 1u
+R18 GND Net-_R17-Pad1_ 12k
+R17 Net-_R17-Pad1_ /Vss 5.6k
+Q11 /Power/Vbat /Power/CLK GND /Power/CLK Net-_C7-Pad2_ Net-_C7-Pad2_ Net-_C7-Pad2_ Net-_C7-Pad2_ TT8M3TR
+Q10 /Power/Vbat /Power/CLK GND /Power/CLK Net-_C5-Pad2_ Net-_C5-Pad2_ Net-_C5-Pad2_ Net-_C5-Pad2_ TT8M3TR
+R19 Net-_R19-Pad1_ /Vdd 8.2k
+R20 GND Net-_R19-Pad1_ 56k
+C10 /Vdd GND 1u
+U3 Net-_R17-Pad1_ /Vss Net-_C6-Pad1_ LM337_TO263
+U4 Net-_C11-Pad1_ NC_12 NC_13 Net-_R19-Pad1_ NC_14 /Vdd NC_15 NC_16 LM317LPW
+C11 Net-_C11-Pad1_ GND .1u
+.end
